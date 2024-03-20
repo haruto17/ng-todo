@@ -1,3 +1,5 @@
 <ul>
-  <li *ngFor="let listItem of list"><input type="checkbox" />{{ listItem }}</li>
+  <li *ngFor="let listItem of list">
+    <input type="checkbox" (click)="onCheck($event)" />{{ listItem }}
+  </li>
 </ul>
