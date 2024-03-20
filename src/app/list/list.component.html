@@ -1,5 +1,6 @@
 <ul>
   <li *ngFor="let listItem of list">
-    <input type="checkbox" (click)="onCheck($event)" />{{ listItem }}
+    <input type="checkbox" (click)="onCheck($event)" />{{ listItem
+    }}<mat-icon>delete_forever</mat-icon>
   </li>
 </ul>
