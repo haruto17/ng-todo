@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, MatIconModule],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
 })
@@ -19,5 +20,10 @@ export class ListComponent {
     } else if (checkbox.checked) {
       li.style.textDecorationLine = 'line-through';
     }
+  }
+
+  onDelete(event: any) {
+    const li = event.target.parentElement;
+    li.remove();
   }
 }
