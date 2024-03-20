@@ -21,4 +21,9 @@ export class ListComponent {
       li.style.textDecorationLine = 'line-through';
     }
   }
+
+  onDelete(event: any) {
+    const li = event.target.parentElement;
+    li.remove();
+  }
 }
